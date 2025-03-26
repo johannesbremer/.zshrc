@@ -34,3 +34,6 @@ check_and_eval "zoxide" "$(zoxide init zsh)"
 
 [ -d "$brew_prefix/bin/eza/completions/zsh" ] && export FPATH="$brew_prefix/bin/eza/completions/zsh:$FPATH"
 
+scan() {
+  magick -density 300 "$@" -monochrome +noise Gaussian -attenuate 0.1 -rotate 0.5 scan-output.pdf
+}
